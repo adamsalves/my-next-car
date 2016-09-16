@@ -4,9 +4,38 @@
   <meta charset='utf-8'/>
   <title>My Next Car App</title>
   <style>
+    header,
+    main {
+      width: 960px;
+      margin: 0 auto;
+    }
+    main table {
+      width: 500px;
+      float: right;
+      margin: 0 auto;
+    }
+    form {
+      float: left;
+      width: 400px;
+    }
     img {
       width: 150px;
       height: 100px;
+    }
+    input {
+      border: 1px solid #ccc;
+      font-size: 16px;
+      width: 300px;
+      min-height: 30px;
+      display: block;
+      margin-top: 5px;
+      outline:  none;
+
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      -o-border-radius: 2px;
+      -ms-border-radius: 2px;
+      border-radius: 2px;
     }
   </style>
 </head>
@@ -21,15 +50,15 @@
     <h2>Cadastrar Carro</h2>
     <form data-js="form-register">
       <label for='image'>Imagem do carro</label>
-      <input type='url' id="image" data-js="input-image" name="car-image"/>
+      <input type='url' id="image" data-js="input-image" name="car-image"/><br/>
       <label for='model'>Marca/Modelo</label>
-      <input type='text' id="model" data-js="input-brand" name="car-brand"/>
+      <input type='text' id="model" data-js="input-brand" name="car-brand"/><br/>
       <label for='year'>Ano</label>
-      <input type='text' id="year" data-js="input-year" name="car-year"/>
+      <input type='text' id="year" data-js="input-year" name="car-year"/><br/>
       <label for='sign'>Placa</label>
-      <input type='text' id="sign" data-js="input-sign" name="car-sign"/>
+      <input type='text' id="sign" data-js="input-sign" name="car-sign"/><br/>
       <label for='cor'>Cor</label>
-      <input type='text' id="cor" data-js="input-color" name="car-color"/>
+      <input type='text' id="cor" data-js="input-color" name="car-color"/><br/>
       <button type="submit" name="button">Cadastrar</button>
     </form>
     <br/>
