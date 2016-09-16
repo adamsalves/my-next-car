@@ -9,15 +9,6 @@
       width: 960px;
       margin: 0 auto;
     }
-    main table {
-      width: 500px;
-      float: right;
-      margin: 0 auto;
-    }
-    form {
-      float: left;
-      width: 400px;
-    }
     img {
       width: 150px;
       height: 100px;
@@ -37,6 +28,10 @@
       -ms-border-radius: 2px;
       border-radius: 2px;
     }
+    .container {
+      display: flex;
+      justify-content: space-between;
+    }
   </style>
 </head>
 <body>
@@ -47,36 +42,38 @@
     </h1>
   </header>
   <main>
-    <h2>Cadastrar Carro</h2>
-    <form data-js="form-register">
-      <label for='image'>Imagem do carro</label>
-      <input type='url' id="image" data-js="input-image" name="car-image"/><br/>
-      <label for='model'>Marca/Modelo</label>
-      <input type='text' id="model" data-js="input-brand" name="car-brand"/><br/>
-      <label for='year'>Ano</label>
-      <input type='text' id="year" data-js="input-year" name="car-year"/><br/>
-      <label for='sign'>Placa</label>
-      <input type='text' id="sign" data-js="input-sign" name="car-sign"/><br/>
-      <label for='cor'>Cor</label>
-      <input type='text' id="cor" data-js="input-color" name="car-color"/><br/>
-      <button type="submit" name="button">Cadastrar</button>
-    </form>
-    <br/>
-    <div>
-      <table>
-        <thead>
-          <tr>
-            <th>Foto</th>
-            <th>Marca/Modelo</th>
-            <th>Ano</th>
-            <th>Placa</th>
-            <th>Cor</th>
-          </tr>
-        </thead>
-        <tbody data-js="cars-list">
-
-        </tbody>
-      </table>
+    <div class="container">
+      <div class="item">
+        <h2>Cadastrar Carro</h2>
+        <form data-js="form-register">
+          <label for='image'>Imagem do carro</label>
+          <input type='url' id="image" data-js="input-image" name="car-image"/><br/>
+          <label for='model'>Marca/Modelo</label>
+          <input type='text' id="model" data-js="input-brand" name="car-brand"/><br/>
+          <label for='year'>Ano</label>
+          <input type='text' id="year" data-js="input-year" name="car-year"/><br/>
+          <label for='sign'>Placa</label>
+          <input type='text' id="sign" data-js="input-sign" name="car-sign"/><br/>
+          <label for='cor'>Cor</label>
+          <input type='text' id="cor" data-js="input-color" name="car-color"/><br/>
+          <button type="submit" name="button">Cadastrar</button>
+        </form>
+      </div>
+      <div class="item">
+        <h2>Informções do Veículo</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Foto</th>
+              <th>Marca/Modelo</th>
+              <th>Ano</th>
+              <th>Placa</th>
+              <th>Cor</th>
+            </tr>
+          </thead>
+          <tbody data-js="cars-list"></tbody>
+        </table>
+      </div>
     </div>
   </main>
   <script src="dom.js"></script>
