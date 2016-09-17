@@ -1,0 +1,33 @@
+header,
+main,
+footer {
+  width: 960px;
+  margin: 0 auto;
+}
+footer {
+  margin-top: 30px;
+  text-align: center;
+}
+img {
+  width: 150px;
+  height: 100px;
+}
+input {
+  border: 1px solid #ccc;
+  font-size: 16px;
+  width: 300px;
+  min-height: 30px;
+  display: block;
+  margin-top: 5px;
+  outline:  none;
+
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -o-border-radius: 2px;
+  -ms-border-radius: 2px;
+  border-radius: 2px;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+}
