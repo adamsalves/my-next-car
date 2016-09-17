@@ -9,8 +9,9 @@ footer {
   text-align: center;
 }
 img {
-  width: 150px;
-  height: 100px;
+  width: 80px;
+  height: 50px;
+  border-radius: 5px;
 }
 input {
   border: 1px solid #ccc;
@@ -30,4 +31,21 @@ input {
 .container {
   display: flex;
   justify-content: space-between;
+}
+.item:first-child {
+  width: 350px;
+}
+.item:last-child {
+  width: 500px;
+}
+.item > table {
+  width: 500px;
+}
+.item > table > thead > tr,
+.item > table > tbody > tr {
+  text-align: center;
+}
+.item > table > thead > tr > th:first-child,
+.item > table > tbody > tr, td:first-child {
+  width: 126px;
 }
