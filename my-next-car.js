@@ -1,4 +1,4 @@
-(function($) {
+(function($, doc) {
   'use strict';
 
   var app = (function() {
@@ -20,14 +20,14 @@
       },
 
       createNewCar: function createNewCar() {
-        var $fragment = document.createDocumentFragment();
-        var $tr = document.createElement('tr');
-        var $tdImage = document.createElement('td');
-        var $image = document.createElement('img');
-        var $tdBrand = document.createElement('td');
-        var $tdYear = document.createElement('td');
-        var $tdSign = document.createElement('td');
-        var $tdColor = document.createElement('td');
+        var $fragment = doc.createDocumentFragment();
+        var $tr = doc.createElement('tr');
+        var $tdImage = doc.createElement('td');
+        var $image = doc.createElement('img');
+        var $tdBrand = doc.createElement('td');
+        var $tdYear = doc.createElement('td');
+        var $tdSign = doc.createElement('td');
+        var $tdColor = doc.createElement('td');
 
         $image.setAttribute('src', $('[data-js="input-image"]').get().value)
         $tdImage.appendChild($image);
@@ -81,4 +81,4 @@
 
   app.init();
 
-})(window.DOM);
+})(window.DOM, document);
