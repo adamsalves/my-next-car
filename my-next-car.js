@@ -62,19 +62,34 @@
       },
 
       getCompanyInfo: function getCompanyInfo() {
+        var data = app.parseData.call(this);
+        var $companyName = $('[data-js="company-name"]').get();
+        var $companyPhone = $('[data-js="company-phone"]').get();
+
         if(!app.isReady.call(this))
           return;
 
-        var data = JSON.parse(this.responseText);
-        var $companyName = $('[data-js="company-name"]').get();
-        var $companyPhone = $('[data-js="company-phone"]').get();
+
         $companyName.textContent = data.name;
         $companyPhone.textContent = data.phone;
       },
 
+      parseData: function parseData() {
+        var result;
+
+        try {
+          result = JSON.parse(this.responseText);
+        } catch (e) {
+          result = null;
+        }
+
+        return result;
+      },
+
       isReady: function isReady() {
         return this.readyState === 4 && this.status === 200;
-      }
+      },
+
 
     };
   })();
