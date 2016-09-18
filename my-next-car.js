@@ -69,7 +69,6 @@
         if(!app.isReady.call(this))
           return;
 
-
         $companyName.textContent = data.name;
         $companyPhone.textContent = data.phone;
       },
