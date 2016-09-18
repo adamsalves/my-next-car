@@ -4,12 +4,12 @@
   var app = (function() {
     return {
       init: function init() {
-        this.companyInfo();
+        this.handleCompanyInfo();
         this.initEvents();
       },
 
       initEvents: function initEvents() {
-        $('[data-js="form-register"]').on('submit', this.handleFormRegister)
+        $('[data-js="form-register"]').on('submit', this.handleFormRegister, false);
       },
 
       handleFormRegister: function handleFormRegister(e) {
@@ -29,7 +29,7 @@
         var $tdSign = doc.createElement('td');
         var $tdColor = doc.createElement('td');
 
-        $image.setAttribute('src', $('[data-js="input-image"]').get().value)
+        $image.setAttribute('src', $('[data-js="input-image"]').get().value);
         $tdImage.appendChild($image);
 
         $tdBrand.textContent = $('[data-js="input-brand"]').get().value;
@@ -54,7 +54,7 @@
         $('[data-js="input-color"]').get().value = '';
       },
 
-      companyInfo: function companyInfo() {
+      handleCompanyInfo: function handleCompanyInfo() {
         var ajax = new XMLHttpRequest();
         ajax.open('GET', '/company.json', true);
         ajax.send();
