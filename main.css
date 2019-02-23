@@ -1,0 +1,51 @@
+header,
+main,
+footer {
+  width: 960px;
+  margin: 0 auto;
+}
+footer {
+  margin-top: 30px;
+  text-align: center;
+}
+img {
+  width: 80px;
+  height: 50px;
+  border-radius: 5px;
+}
+input {
+  border: 1px solid #ccc;
+  font-size: 16px;
+  width: 300px;
+  min-height: 30px;
+  display: block;
+  margin-top: 5px;
+  outline:  none;
+
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -o-border-radius: 2px;
+  -ms-border-radius: 2px;
+  border-radius: 2px;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+.item:first-child {
+  width: 350px;
+}
+.item:last-child {
+  width: 500px;
+}
+.item > table {
+  width: 500px;
+}
+.item > table > thead > tr,
+.item > table > tbody > tr {
+  text-align: center;
+}
+.item > table > thead > tr > th:first-child,
+.item > table > tbody > tr, td:first-child {
+  width: 126px;
+}
